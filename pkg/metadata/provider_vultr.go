@@ -61,6 +61,9 @@ func (p *ProviderVultr) Extract() ([]byte, error) {
 	// instance-id
 	vultrMetaGet("instanceid", "instance_id", 0644)
 
+	// BGP my asn
+	vultrMetaGet("bgp/ipv4/my-asn", "my_asn_ipv4", 0644)
+
 	return nil, nil
 }
 
